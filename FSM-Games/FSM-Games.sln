@@ -9,6 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSM-Games.TicTacToe", "FSM-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TicTacToe.Tests", "FSM-Games.TicTacToe.Tests\FSM-Games.TicTacToe.Tests.csproj", "{B3F42227-BAE2-4C89-AB86-F443EFBC9069}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSM-Games.SwitchLocks", "FSM-Games.SwitchLocks\FSM-Games.SwitchLocks.csproj", "{EFFC4406-ED2D-45B6-860E-99B671B0CBA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.SwitchLocks.Client", "FSM-Games.SwitchLocks.Client\FSM-Games.SwitchLocks.Client.csproj", "{BE4F63DF-BABF-4918-BCE9-AE1B181A72D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.SwitchLocks.Tests", "FSM-Games.SwitchLocks.Tests\FSM-Games.SwitchLocks.Tests.csproj", "{FB6D08FA-C524-400B-80F8-8E354D55E77D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{B3F42227-BAE2-4C89-AB86-F443EFBC9069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3F42227-BAE2-4C89-AB86-F443EFBC9069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3F42227-BAE2-4C89-AB86-F443EFBC9069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFFC4406-ED2D-45B6-860E-99B671B0CBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFFC4406-ED2D-45B6-860E-99B671B0CBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFFC4406-ED2D-45B6-860E-99B671B0CBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFFC4406-ED2D-45B6-860E-99B671B0CBA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4F63DF-BABF-4918-BCE9-AE1B181A72D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4F63DF-BABF-4918-BCE9-AE1B181A72D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4F63DF-BABF-4918-BCE9-AE1B181A72D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4F63DF-BABF-4918-BCE9-AE1B181A72D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6D08FA-C524-400B-80F8-8E354D55E77D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6D08FA-C524-400B-80F8-8E354D55E77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6D08FA-C524-400B-80F8-8E354D55E77D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6D08FA-C524-400B-80F8-8E354D55E77D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

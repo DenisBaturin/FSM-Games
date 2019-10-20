@@ -14,12 +14,12 @@ namespace FSM_Games.TicTacToe
             Draw
         }
 
-        private Dictionary<int, Figure?> InnerCells { get; }
+        private readonly Dictionary<int, Figure?> _cells;
         public IReadOnlyDictionary<int, Figure?> Cells { get; }
 
         internal GameField()
         {
-            InnerCells = new Dictionary<int, Figure?>()
+            _cells = new Dictionary<int, Figure?>()
             {
                 {1, null},
                 {2, null},
@@ -32,14 +32,14 @@ namespace FSM_Games.TicTacToe
                 {9, null}
             };
 
-            Cells = InnerCells;
+            Cells = _cells;
         }
 
         internal void Clear()
         {
-            for (var index = 1; index <= Cells.Count; index++)
+            for (var index = 1; index <= _cells.Count; index++)
             {
-                InnerCells[index] = null;
+                _cells[index] = null;
             }
         }
 
@@ -50,13 +50,13 @@ namespace FSM_Games.TicTacToe
                 throw new ArgumentException("Cell index must be in [1-9] range!", nameof(cellIndex));
             }
 
-            if (Cells[cellIndex] != null)
+            if (_cells[cellIndex] != null)
             {
                 //throw new InvalidOperationException("Invalid move! The cell isn't empty.");
                 return SetCellResult.InvalidMove;
             }
 
-            InnerCells[cellIndex] = figure;
+            _cells[cellIndex] = figure;
 
             if (IsWinningMove(cellIndex, figure))
             {
@@ -78,54 +78,54 @@ namespace FSM_Games.TicTacToe
             switch (cellIndex)
             {
                 case 1:
-                    result = Cells[2] == figure & Cells[3] == figure
-                             || Cells[4] == figure & Cells[7] == figure
-                             || Cells[5] == figure & Cells[9] == figure;
+                    result = _cells[2] == figure & _cells[3] == figure
+                             || _cells[4] == figure & _cells[7] == figure
+                             || _cells[5] == figure & _cells[9] == figure;
 
                     break;
                 case 2:
-                    result = Cells[1] == figure & Cells[3] == figure
-                             || Cells[5] == figure & Cells[8] == figure;
+                    result = _cells[1] == figure & _cells[3] == figure
+                             || _cells[5] == figure & _cells[8] == figure;
 
                     break;
                 case 3:
-                    result = Cells[1] == figure & Cells[2] == figure
-                             || Cells[5] == figure & Cells[7] == figure
-                             || Cells[6] == figure & Cells[9] == figure;
+                    result = _cells[1] == figure & _cells[2] == figure
+                             || _cells[5] == figure & _cells[7] == figure
+                             || _cells[6] == figure & _cells[9] == figure;
 
                     break;
                 case 4:
-                    result = Cells[1] == figure & Cells[7] == figure
-                             || Cells[5] == figure & Cells[6] == figure;
+                    result = _cells[1] == figure & _cells[7] == figure
+                             || _cells[5] == figure & _cells[6] == figure;
 
                     break;
                 case 5:
-                    result = Cells[1] == figure & Cells[9] == figure
-                             || Cells[2] == figure & Cells[8] == figure
-                             || Cells[3] == figure & Cells[7] == figure
-                             || Cells[4] == figure & Cells[6] == figure;
+                    result = _cells[1] == figure & _cells[9] == figure
+                             || _cells[2] == figure & _cells[8] == figure
+                             || _cells[3] == figure & _cells[7] == figure
+                             || _cells[4] == figure & _cells[6] == figure;
 
                     break;
                 case 6:
-                    result = Cells[3] == figure & Cells[9] == figure
-                             || Cells[4] == figure & Cells[5] == figure;
+                    result = _cells[3] == figure & _cells[9] == figure
+                             || _cells[4] == figure & _cells[5] == figure;
 
                     break;
                 case 7:
-                    result = Cells[1] == figure & Cells[4] == figure
-                             || Cells[3] == figure & Cells[5] == figure
-                             || Cells[8] == figure & Cells[9] == figure;
+                    result = _cells[1] == figure & _cells[4] == figure
+                             || _cells[3] == figure & _cells[5] == figure
+                             || _cells[8] == figure & _cells[9] == figure;
 
                     break;
                 case 8:
-                    result = Cells[2] == figure & Cells[5] == figure
-                             || Cells[7] == figure & Cells[9] == figure;
+                    result = _cells[2] == figure & _cells[5] == figure
+                             || _cells[7] == figure & _cells[9] == figure;
 
                     break;
                 case 9:
-                    result = Cells[1] == figure & Cells[5] == figure
-                             || Cells[3] == figure & Cells[6] == figure
-                             || Cells[7] == figure & Cells[8] == figure;
+                    result = _cells[1] == figure & _cells[5] == figure
+                             || _cells[3] == figure & _cells[6] == figure
+                             || _cells[7] == figure & _cells[8] == figure;
 
                     break;
                 default:
@@ -137,18 +137,18 @@ namespace FSM_Games.TicTacToe
 
         private bool IsNoEmptyCells()
         {
-            return Cells.All(x => x.Value != null);
+            return _cells.All(x => x.Value != null);
         }
 
         internal int ReturnBestMove(Figure figure)
         {
-            if (Cells.All(x => x.Value != null))
+            if (_cells.All(x => x.Value != null))
             {
                 throw new InvalidOperationException("There are no empty cells on the field!");
             }
 
             // get win
-            foreach (var cell in Cells)
+            foreach (var cell in _cells)
             {
                 if (cell.Value == null && IsWinningMove(cell.Key, figure))
                 {
@@ -158,7 +158,7 @@ namespace FSM_Games.TicTacToe
 
             // block opponent win
             var opponentsFigure = figure.GetOpponentsFigure();
-            foreach (var cell in Cells)
+            foreach (var cell in _cells)
             {
                 if (cell.Value == null && IsWinningMove(cell.Key, opponentsFigure))
                 {
@@ -167,59 +167,59 @@ namespace FSM_Games.TicTacToe
             }
 
             // get center cell
-            if (Cells[5] == null)
+            if (_cells[5] == null)
             {
                 return 5;
             }
 
             // get best corners cell
-            if (Cells[1] == opponentsFigure && Cells[9] == null)
+            if (_cells[1] == opponentsFigure && _cells[9] == null)
             {
                 return 9;
             }
-            if (Cells[3] == opponentsFigure && Cells[7] == null)
+            if (_cells[3] == opponentsFigure && _cells[7] == null)
             {
                 return 7;
             }
-            if (Cells[9] == opponentsFigure && Cells[1] == null)
+            if (_cells[9] == opponentsFigure && _cells[1] == null)
             {
                 return 1;
             }
-            if (Cells[7] == opponentsFigure && Cells[3] == null)
+            if (_cells[7] == opponentsFigure && _cells[3] == null)
             {
                 return 3;
             }
 
-            if (Cells[2] == opponentsFigure && Cells[4] == opponentsFigure && Cells[1] == null)
+            if (_cells[2] == opponentsFigure && _cells[4] == opponentsFigure && _cells[1] == null)
             {
                 return 1;
             }
-            if (Cells[2] == opponentsFigure && Cells[6] == opponentsFigure && Cells[3] == null)
+            if (_cells[2] == opponentsFigure && _cells[6] == opponentsFigure && _cells[3] == null)
             {
                 return 3;
             }
-            if (Cells[6] == opponentsFigure && Cells[8] == opponentsFigure && Cells[9] == null)
+            if (_cells[6] == opponentsFigure && _cells[8] == opponentsFigure && _cells[9] == null)
             {
                 return 9;
             }
-            if (Cells[4] == opponentsFigure && Cells[8] == opponentsFigure && Cells[7] == null)
+            if (_cells[4] == opponentsFigure && _cells[8] == opponentsFigure && _cells[7] == null)
             {
                 return 7;
             }
 
-            if (Cells[1] == null)
+            if (_cells[1] == null)
             {
                 return 1;
             }
-            if (Cells[3] == null)
+            if (_cells[3] == null)
             {
                 return 3;
             }
-            if (Cells[9] == null)
+            if (_cells[9] == null)
             {
                 return 9;
             }
-            if (Cells[7] == null)
+            if (_cells[7] == null)
             {
                 return 7;
             }
@@ -230,7 +230,7 @@ namespace FSM_Games.TicTacToe
             {
                 var random = new Random();
                 cellIndex = random.Next(1, 10);
-            } while (Cells[cellIndex] != null);
+            } while (_cells[cellIndex] != null);
 
             return cellIndex;
         }

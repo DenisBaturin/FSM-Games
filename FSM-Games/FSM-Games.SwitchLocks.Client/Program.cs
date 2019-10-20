@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace FSM_Games.TicTacToe.Client
+namespace FSM_Games.SwitchLocks.Client
 {
     internal static class Program
     {
