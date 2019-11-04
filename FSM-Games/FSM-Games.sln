@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TicTacToe.Client", "FSM-Games.TicTacToe.Client\FSM-Games.TicTacToe.Client.csproj", "{D0A9F727-4257-4B51-99A2-A4323272FF5E}"
 EndProject
@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSM-Games.SwitchLocks", "FS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.SwitchLocks.Client", "FSM-Games.SwitchLocks.Client\FSM-Games.SwitchLocks.Client.csproj", "{BE4F63DF-BABF-4918-BCE9-AE1B181A72D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.SwitchLocks.Tests", "FSM-Games.SwitchLocks.Tests\FSM-Games.SwitchLocks.Tests.csproj", "{FB6D08FA-C524-400B-80F8-8E354D55E77D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSM-Games.SwitchLocks.Tests", "FSM-Games.SwitchLocks.Tests\FSM-Games.SwitchLocks.Tests.csproj", "{FB6D08FA-C524-400B-80F8-8E354D55E77D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TowerOfHanoi", "FSM-Games.TowerOfHanoi\FSM-Games.TowerOfHanoi.csproj", "{2458894C-82C1-447B-AD0E-58347763BDDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TowerOfHanoi.Client", "FSM-Games.TowerOfHanoi.Client\FSM-Games.TowerOfHanoi.Client.csproj", "{FDE81989-C6EC-468F-9FA6-46BD3C438309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TowerOfHanoi.Tests", "FSM-Games.TowerOfHanoi.Tests\FSM-Games.TowerOfHanoi.Tests.csproj", "{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{FB6D08FA-C524-400B-80F8-8E354D55E77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB6D08FA-C524-400B-80F8-8E354D55E77D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB6D08FA-C524-400B-80F8-8E354D55E77D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2458894C-82C1-447B-AD0E-58347763BDDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2458894C-82C1-447B-AD0E-58347763BDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2458894C-82C1-447B-AD0E-58347763BDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2458894C-82C1-447B-AD0E-58347763BDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE81989-C6EC-468F-9FA6-46BD3C438309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE81989-C6EC-468F-9FA6-46BD3C438309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE81989-C6EC-468F-9FA6-46BD3C438309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE81989-C6EC-468F-9FA6-46BD3C438309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

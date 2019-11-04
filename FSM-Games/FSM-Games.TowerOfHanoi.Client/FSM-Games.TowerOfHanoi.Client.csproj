@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE4F63DF-BABF-4918-BCE9-AE1B181A72D6}</ProjectGuid>
+    <ProjectGuid>{FDE81989-C6EC-468F-9FA6-46BD3C438309}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FSM_Games.SwitchLocks.Client</RootNamespace>
-    <AssemblyName>FSM-Games.SwitchLocks.Client</AssemblyName>
+    <RootNamespace>FSM_Games.TowerOfHanoi.Client</RootNamespace>
+    <AssemblyName>FSM-Games.TowerOfHanoi.Client</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>FSM_Games.SwitchLocks.Client.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MediaPlayer.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,7 +56,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,7 +65,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,19 +80,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Graphics\Door001.bmp" />
-    <EmbeddedResource Include="Resources\Graphics\Off.bmp" />
-    <EmbeddedResource Include="Resources\Graphics\On.bmp" />
-    <EmbeddedResource Include="Resources\Graphics\Opened.bmp" />
-    <EmbeddedResource Include="Resources\Graphics\Closed.bmp" />
-    <EmbeddedResource Include="Resources\Sounds\CellSwitch.wav" />
-    <EmbeddedResource Include="Resources\Sounds\LockSwitch.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FSM-Games.SwitchLocks\FSM-Games.SwitchLocks.csproj">
-      <Project>{effc4406-ed2d-45b6-860e-99b671b0cba4}</Project>
-      <Name>FSM-Games.SwitchLocks</Name>
+    <ProjectReference Include="..\FSM-Games.TowerOfHanoi\FSM-Games.TowerOfHanoi.csproj">
+      <Project>{2458894c-82c1-447b-ad0e-58347763bddb}</Project>
+      <Name>FSM-Games.TowerOfHanoi</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Graphics\01.bmp" />
+    <EmbeddedResource Include="Resources\Graphics\02.bmp" />
+    <EmbeddedResource Include="Resources\Graphics\03.bmp" />
+    <EmbeddedResource Include="Resources\Graphics\04.bmp" />
+    <EmbeddedResource Include="Resources\Graphics\05.bmp" />
+    <EmbeddedResource Include="Resources\Graphics\06.bmp" />
+    <EmbeddedResource Include="Resources\Graphics\07.bmp" />
+    <EmbeddedResource Include="Resources\Graphics\08.bmp" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
