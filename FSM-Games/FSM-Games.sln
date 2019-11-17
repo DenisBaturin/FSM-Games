@@ -15,11 +15,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.SwitchLocks.Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSM-Games.SwitchLocks.Tests", "FSM-Games.SwitchLocks.Tests\FSM-Games.SwitchLocks.Tests.csproj", "{FB6D08FA-C524-400B-80F8-8E354D55E77D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TowerOfHanoi", "FSM-Games.TowerOfHanoi\FSM-Games.TowerOfHanoi.csproj", "{2458894C-82C1-447B-AD0E-58347763BDDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSM-Games.TowerOfHanoi", "FSM-Games.TowerOfHanoi\FSM-Games.TowerOfHanoi.csproj", "{2458894C-82C1-447B-AD0E-58347763BDDB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TowerOfHanoi.Client", "FSM-Games.TowerOfHanoi.Client\FSM-Games.TowerOfHanoi.Client.csproj", "{FDE81989-C6EC-468F-9FA6-46BD3C438309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.TowerOfHanoi.Tests", "FSM-Games.TowerOfHanoi.Tests\FSM-Games.TowerOfHanoi.Tests.csproj", "{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSM-Games.TowerOfHanoi.Tests", "FSM-Games.TowerOfHanoi.Tests\FSM-Games.TowerOfHanoi.Tests.csproj", "{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.BullsAndCows", "FSM-Games.BullsAndCows\FSM-Games.BullsAndCows.csproj", "{F0C7A3FD-9F95-4C54-A824-DE74C4FFB6F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.BullsAndCows.Client", "FSM-Games.BullsAndCows.Client\FSM-Games.BullsAndCows.Client.csproj", "{A9179784-787B-4354-9745-13D3E08B9DF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSM-Games.BullsAndCows.Tests", "FSM-Games.BullsAndCows.Tests\FSM-Games.BullsAndCows.Tests.csproj", "{8362D059-E946-483A-A07A-FF68708A790A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB4BD16D-22B0-4F27-B388-ED696D48E9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C7A3FD-9F95-4C54-A824-DE74C4FFB6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C7A3FD-9F95-4C54-A824-DE74C4FFB6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C7A3FD-9F95-4C54-A824-DE74C4FFB6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C7A3FD-9F95-4C54-A824-DE74C4FFB6F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9179784-787B-4354-9745-13D3E08B9DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9179784-787B-4354-9745-13D3E08B9DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9179784-787B-4354-9745-13D3E08B9DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9179784-787B-4354-9745-13D3E08B9DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8362D059-E946-483A-A07A-FF68708A790A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8362D059-E946-483A-A07A-FF68708A790A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8362D059-E946-483A-A07A-FF68708A790A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8362D059-E946-483A-A07A-FF68708A790A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
